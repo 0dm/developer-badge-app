@@ -2,7 +2,7 @@ import streamlit as st
 import discord
 import asyncio
 
-st.title("Discord Bot Runner")
+st.title("developer-badge-app")
 token = st.text_input("Enter your bot token")
 
 bot_status = st.empty()  # Placeholder for bot status message
