@@ -8,7 +8,7 @@ if you do not have an application already, create one at https://discord.com/dev
 see [here](https://support-dev.discord.com/hc/en-us/articles/10113997751447-Active-Developer-Badge) for an actual explanation.
 
 ## usage
-1. go [here](https://0dm-developer-badge-app-main-bfopwq.streamlit.app) (Streamlit)
+1. go [here](https://discord-dev.streamlit.app) (Streamlit)
 2. enter your bot's token
 3. click run
 4. send `/ping` to the bot
