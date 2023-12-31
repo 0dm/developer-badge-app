@@ -26,6 +26,9 @@ def run_bot(token):
         bot_status.error(f"Bot has encountered an error: {e}")
     finally:
         bot_status.success("The bot has run successfully!")
+        st.write(
+            "You can claim your active developer badge [here](https://discord.com/developers/active-developer)"
+        )
 
 
 def disable():
