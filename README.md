@@ -1,5 +1,8 @@
 # developer-badge-app
-## an easy way to get an active developer badge on Discord
+## an easy way to get the active developer badge on Discord
+![badge](https://github.com/0dm/developer-badge-app/assets/57018940/bc64bda9-749b-466d-81f0-95732aef3aa3)
+
+
 if you do not have an application already, create one at https://discord.com/developers/applications and invite the bot your server by going to oauth2->url generator and selecting the scope "bot"
 
 ## usage
