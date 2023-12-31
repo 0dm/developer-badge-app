@@ -16,3 +16,5 @@ if you do not have an application already, create one at https://discord.com/dev
 
 `streamlit run main.py`
 
+# the badge
+read more here: https://support-dev.discord.com/hc/en-us/articles/10113997751447-Active-Developer-Badge
