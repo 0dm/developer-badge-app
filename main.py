@@ -20,6 +20,15 @@ def run_bot(token):
         await bot.close()
         loop.stop()
 
+    @bot.event
+    async def on_ready():
+        bot_status.info(f"Logged in as {bot.user.name}#{bot.user.discriminator}")
+        await bot.change_presence(
+            activity=discord.Activity(
+                type=discord.ActivityType.watching, name="for /ping"
+            )
+        )
+
     try:
         bot.run(token)
     except Exception as e:
