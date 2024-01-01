@@ -41,7 +41,8 @@ def run_bot(token):
 
 
 def disable():
-    st.session_state.disabled = True
+    if token:
+        st.session_state.disabled = True
 
 
 if "disabled" not in st.session_state:
