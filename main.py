@@ -5,10 +5,10 @@ import asyncio
 st.title("developer-badge-app")
 token = st.text_input("Enter your bot token")
 
-bot_status = st.empty()  # Placeholder for bot status message
+bot_status = st.empty()
 
 
-def run_bot(token):
+def run_bot(token: str):
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     bot = discord.Bot()
@@ -33,24 +33,23 @@ def run_bot(token):
         bot.run(token)
     except Exception as e:
         bot_status.error(f"Bot has encountered an error: {e}")
-    finally:
-        bot_status.success("The bot has run successfully!")
-        st.write(
-            "You can claim your active developer badge [here](https://discord.com/developers/active-developer)"
-        )
+        st.session_state.disabled = False
+        return
 
-
-def disable():
-    if token:
-        st.session_state.disabled = True
+    bot_status.success("The bot has run successfully!")
+    st.write(
+        "You can claim your active developer badge [here](https://discord.com/developers/active-developer)"
+    )
+    return
 
 
 if "disabled" not in st.session_state:
     st.session_state.disabled = False
 
-if st.button("Run Bot", on_click=disable, disabled=st.session_state.disabled):
+if st.button("Run Bot", disabled=st.session_state.disabled):
     if token:
         bot_status.warning("Bot is running...")
+        st.session_state.disabled = True
         run_bot(token)
     else:
         st.error("Please enter a bot token")
